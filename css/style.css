@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(177, 225, 255);
+    color: lightcoral;
+}
+
+button {
+    border: 2px solid lightcoral;
+    background-color: rgb(241, 214, 214);
+    color: lightcoral;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+#list {
+    display: block;
+    font-weight: 600;
+}
+
+#question, #invalid-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#insert, #no-insert {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+input[type="checkbox"]:checked {
+    text-decoration: line-through; /* TODO fazer o risco*/
+}
