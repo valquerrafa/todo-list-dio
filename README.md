@@ -8,3 +8,6 @@ Um projeto para web simples para aprender a interagir com o DOM (Document Object
 
 A lista e seu conteúdo não são armazenados em nenhum servidor, sendo apenas client-side, ou seja, é apenas visual.
 Alterações como implementação de facilidades de uso através de mensagens e botões extras foram feitas.
+
+
+#### Projeto original: https://github.com/stebsnusch/basecamp-javascript/tree/main/introducao-ao-javascript/to-do%20list
