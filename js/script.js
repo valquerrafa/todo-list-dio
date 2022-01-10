@@ -12,20 +12,22 @@ submit.addEventListener('click', () => {
     input.value = '';
     
     if (task !== '') {
-        const taskList = document.getElementsByClassName('task');
+        const taskList = document.getElementsByTagName('span');
 
         if (taskList.length == 0) {
-            list.innerHTML += `<input class="task" type="checkbox">${task}</input><br>`;
+            addTask = `<label><input class="task" type="checkbox"><span>${task}</span></label><br>`;
+            list.insertAdjacentHTML('beforeend', addTask);
         } else {
             let exist = false
             for (let i = 0; i < taskList.length; i++) {
-                if (task === taskList[i].nextSibling.data) {
+                if (task === taskList[i].innerHTML) {
                     exist = true
                 }
             }
 
             if (!exist) {
-                list.innerHTML += `<input class="task" type="checkbox">${task}</input><br>`;
+                addTask = `<label><input class="task" type="checkbox"><span>${task}</span></label><br>`;
+                list.insertAdjacentHTML('beforeend', addTask);
             } else {
                 const divQuestion = `
                 <div id="question">
@@ -45,7 +47,8 @@ submit.addEventListener('click', () => {
                 
                 insertButton.addEventListener('click', () => {
                     question.remove();
-                    list.innerHTML += `<input class="task" type="checkbox">${task}</input><br>`;
+                    addTask = `<label><input class="task" type="checkbox"><span>${task}</span></label><br>`;
+                    list.insertAdjacentHTML('beforeend', addTask);
                 });
                 noInsertButton.addEventListener('click', () => {
                    question.remove();
